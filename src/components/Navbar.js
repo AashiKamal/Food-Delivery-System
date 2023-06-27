@@ -1,9 +1,6 @@
 
 
 
-
-
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
@@ -62,10 +59,6 @@ export default function Navbar() {
                 <Link className="btn bg-white text-success mx-1" to="/createuser">
                   Signup
                 </Link>
-               
-                {/* <Link className="btn bg-white text-success mx-1" to="/myOrder">
-                  My Orders
-                </Link> */}
               </div>
             ) : (
               <>

@@ -12,8 +12,6 @@ export default function Home() {
   const [search, setSearch] = useState('')
   const loadData = async () => {
     let response = await fetch("http://localhost:5000/api/foodData", {
-      // credentials: 'include',
-      // Origin:"http://localhost:3000/login",
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -22,7 +20,6 @@ export default function Home() {
     });
     console.log(response);
     response = await response.json()
-    // console.log(response[1][0].CategoryName)
     setFoodItems(response[0])
     setFoodCat(response[1])
   }
