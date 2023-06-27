@@ -25,7 +25,6 @@ function App() {
         <Route exact path="/login" element={<Login/>}/>
        
         <Route exact path="/createuser" element={<Signup/>}/>
-        {/* <Route exact path="/myOrder" element={<MyOrder/>}/> */}
         <Route exact path="/myorder" element={<MyOrder/>}/>
       </Routes>
      
