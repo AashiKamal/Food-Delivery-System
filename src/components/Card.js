@@ -75,14 +75,16 @@ export default function Card(props) {
   // console.log(totval)
   return (
     <div>
-
+      {/* Importing cad from bootstrap */}
       <div className="card mt-3" style={{ width: "16rem", maxHeight: "360px" }}>
         <img src={props.foodItem.img} className="card-img-top" alt="..." style={{ height: "120px", objectFit: "fill" }} />
         <div className="card-body">
           <h5 className="card-title">{props.foodName}</h5>
           {/* <p className="card-text">This is some random text. This is description.</p> */}
           <div className='container w-100 p-0' style={{ height: "38px" }}>
+          
             <select className="m-2 h-100 w-20 bg-success text-black rounded" style={{ select: "#FF0000" }} onClick={handleClick} onChange={handleQty}>
+              {/* use of javascript inside braces html inside return */}
               {Array.from(Array(6), (e, i) => {
                 return (
                   <option key={i + 1} value={i + 1}>{i + 1}</option>)
@@ -93,7 +95,7 @@ export default function Card(props) {
                 return <option key={i} value={i}>{i}</option>
               })}
             </select>
-            <div className=' d-inline ms-2 h-100 w-20 fs-5' >
+            <div className=' d-inline h-100 w-20 fs-5' >
               ₹{finalPrice}/-
             </div>
           </div>
