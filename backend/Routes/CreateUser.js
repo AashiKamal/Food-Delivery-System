@@ -1,7 +1,3 @@
-
-
-
-
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
@@ -9,10 +5,11 @@ const { body, validationResult } = require('express-validator');
 
 const jwt = require("jsonwebtoken")
  const bcrypt = require("bcryptjs");
-const jwtSecret = "MynameisEndtoEndTouTubeChannel$#"
+// const jwtSecret = "MynameisEndtoEndTouTubeChannel$#"
+const jwtSecret = "MynameisAashiAndThisIsTheToken"
 router.post("/createuser", [
   body("email").isEmail(),
-  body("name").isLength({ min: 5 }),
+  body("name").isLength({ min: 5 }).withMessage("Name should be more than 8 characters"),
   body("password").isLength({ min: 5 }).withMessage("Incorrect password")
 ], async (req, res) => {
   const errors = validationResult(req);
@@ -30,6 +27,7 @@ router.post("/createuser", [
         email: req.body.email,
         location: req.body.location
     });
+    //testing purpose
     res.json({ success: true });
   } catch (error) {
     console.error(error);

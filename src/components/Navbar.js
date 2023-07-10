@@ -74,6 +74,7 @@ export default function Navbar() {
                 <div className="btn bg-white text-success mx-2 text-danger" onClick={handleLogout}>
                   Log Out
                 </div>
+                
               </>
             )}
           </div>

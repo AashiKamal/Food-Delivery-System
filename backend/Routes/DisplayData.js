@@ -1,6 +1,8 @@
 const express = require("express")
 const router = express.Router()
 
+
+//for display data at the frontend
 router.get('/foodData', async (req, res) => {
     try {
         // console.log( JSON.stringify(global.foodData))

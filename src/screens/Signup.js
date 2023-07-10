@@ -36,6 +36,7 @@ export default function Signup() {
   return (
     <>
       <div className="container">
+        {/* //connect to backend */}
         <form onSubmit={handleSubmit}>
 
           <div className="mb-3">
