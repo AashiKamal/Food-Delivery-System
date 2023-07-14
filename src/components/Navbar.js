@@ -1,6 +1,4 @@
 
-
-
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
@@ -74,6 +72,10 @@ export default function Navbar() {
                 <div className="btn bg-white text-success mx-2 text-danger" onClick={handleLogout}>
                   Log Out
                 </div>
+                <Link className="btn bg-white text-success mx-2 text-danger" to="/createtotp">
+  TwoFAc
+</Link>
+
                 
               </>
             )}

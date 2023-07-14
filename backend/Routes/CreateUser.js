@@ -4,9 +4,9 @@ const User = require("../models/User");
 const { body, validationResult } = require('express-validator');
 
 const jwt = require("jsonwebtoken")
- const bcrypt = require("bcryptjs");
-// const jwtSecret = "MynameisEndtoEndTouTubeChannel$#"
-const jwtSecret = "MynameisAashiAndThisIsTheToken"
+const bcrypt = require("bcryptjs");
+const jwtSecret = "MynameisEndtoEndTouTubeChannel$#"
+//const jwtSecret = "MynameisAashiAndThisIsTheToken"
 router.post("/createuser", [
   body("email").isEmail(),
   body("name").isLength({ min: 5 }).withMessage("Name should be more than 8 characters"),

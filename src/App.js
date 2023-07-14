@@ -4,6 +4,10 @@ import Home from "./screens/Home";
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
 import MyOrder from './screens/MyOrder';
+import TwoFAc from './screens/TwoFAc';
+import VerifyOTP from './screens/VerifyOTP';//new......................
+
+
 
 
 
@@ -39,9 +43,12 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/login" element={<Login />} />
+            
 
             <Route exact path="/createuser" element={<Signup />} />
             <Route exact path="/myorder" element={<MyOrder />} />
+            <Route exact path="/createtotp" element={<TwoFAc />} />
+            <Route path="/verify-otp" element={<VerifyOTP />} />
           </Routes>
 
         </div>
